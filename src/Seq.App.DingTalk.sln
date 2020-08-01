@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkChatbot", "DingtalkChatbot\DingtalkChatbot.csproj", "{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Text", "Seq.App.DingTalk.Text\Seq.App.DingTalk.Text.csproj", "{EFF08959-E6DE-449A-B88D-C3202CDB3B77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Abstractions", "Seq.App.DingTalk.Abstractions\Seq.App.DingTalk.Abstractions.csproj", "{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkChatbot.Tests", "DingtalkChatbot.Tests\DingtalkChatbot.Tests.csproj", "{149B993E-6C25-4BA6-9D24-1281FC1FD85C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Image", "Seq.App.DingTalk.Image\Seq.App.DingTalk.Image.csproj", "{0F878892-DC8F-4722-902A-5FF7A19A085F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Link", "Seq.App.DingTalk.Link\Seq.App.DingTalk.Link.csproj", "{2F53BB66-B1CB-4C44-8B5C-9C9F18F06304}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Markdown", "Seq.App.DingTalk.Markdown\Seq.App.DingTalk.Markdown.csproj", "{D9A7A1EF-A8FA-4CC3-961E-C432D8E7F2F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.ActionCard", "Seq.App.DingTalk.ActionCard\Seq.App.DingTalk.ActionCard.csproj", "{315E4D1D-BE9D-46C1-9EE0-BBA4B6FCFD1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{682EBE73-CA7F-41CF-B93A-90D1B66D7FC8}"
+	ProjectSection(SolutionItems) = preProject
+		Build\BuildNuget.nuspec = Build\BuildNuget.nuspec
+		Build\BuildNuget.targets = Build\BuildNuget.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seq.Api.Tests", "Seq.Api.Tests\Seq.Api.Tests.csproj", "{51CD8460-78DF-484E-AA0D-38ADF93EDB85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF08959-E6DE-449A-B88D-C3202CDB3B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF08959-E6DE-449A-B88D-C3202CDB3B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF08959-E6DE-449A-B88D-C3202CDB3B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF08959-E6DE-449A-B88D-C3202CDB3B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149B993E-6C25-4BA6-9D24-1281FC1FD85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149B993E-6C25-4BA6-9D24-1281FC1FD85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149B993E-6C25-4BA6-9D24-1281FC1FD85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149B993E-6C25-4BA6-9D24-1281FC1FD85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F878892-DC8F-4722-902A-5FF7A19A085F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F878892-DC8F-4722-902A-5FF7A19A085F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F878892-DC8F-4722-902A-5FF7A19A085F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F878892-DC8F-4722-902A-5FF7A19A085F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F53BB66-B1CB-4C44-8B5C-9C9F18F06304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F53BB66-B1CB-4C44-8B5C-9C9F18F06304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F53BB66-B1CB-4C44-8B5C-9C9F18F06304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F53BB66-B1CB-4C44-8B5C-9C9F18F06304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A7A1EF-A8FA-4CC3-961E-C432D8E7F2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A7A1EF-A8FA-4CC3-961E-C432D8E7F2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A7A1EF-A8FA-4CC3-961E-C432D8E7F2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A7A1EF-A8FA-4CC3-961E-C432D8E7F2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315E4D1D-BE9D-46C1-9EE0-BBA4B6FCFD1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315E4D1D-BE9D-46C1-9EE0-BBA4B6FCFD1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315E4D1D-BE9D-46C1-9EE0-BBA4B6FCFD1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315E4D1D-BE9D-46C1-9EE0-BBA4B6FCFD1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CD8460-78DF-484E-AA0D-38ADF93EDB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CD8460-78DF-484E-AA0D-38ADF93EDB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CD8460-78DF-484E-AA0D-38ADF93EDB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CD8460-78DF-484E-AA0D-38ADF93EDB85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EAE6258-BABC-4650-9B0B-C66984990036}
+	EndGlobalSection
+EndGlobal

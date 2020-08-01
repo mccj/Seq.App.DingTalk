@@ -1,0 +1,52 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<PackageId Condition=" '$(PackageId)' == '' ">$(AssemblyName)</PackageId>
+		<PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
+		<PackageVersion Condition=" '$(PackageVersion)' == '' ">1.0.0</PackageVersion>
+		<!--<IncludeContentInPack Condition="'$(IncludeContentInPack)'==''">true</IncludeContentInPack>
+		<GenerateNuspecDependsOn>_LoadPackInputItems; _GetTargetFrameworksOutput; _WalkEachTargetPerFramework; _GetPackageFiles; $(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>-->
+		<PackageDescription Condition="'$(PackageDescription)'==''">$(Description)</PackageDescription>
+		<PackageDescription Condition="'$(PackageDescription)'==''">Package Description</PackageDescription>
+		<PackageAuthors Condition=" '$(PackageAuthors)' == '' ">$(Authors)</PackageAuthors>
+		<PackageAuthors Condition=" '$(PackageAuthors)' == '' ">$(AssemblyName)</PackageAuthors>
+
+		<!--<IsPackable Condition="'$(IsPackable)'=='' AND '$(IsTestProject)'=='true'">false</IsPackable>
+		<IsPackable Condition="'$(IsPackable)'==''">true</IsPackable>
+		<IncludeBuildOutput Condition="'$(IncludeBuildOutput)'==''">true</IncludeBuildOutput>
+		<BuildOutputTargetFolder Condition="'$(BuildOutputTargetFolder)' == '' AND '$(IsTool)' == 'true'">tools</BuildOutputTargetFolder>
+		<BuildOutputTargetFolder Condition="'$(BuildOutputTargetFolder)' == ''">lib</BuildOutputTargetFolder>
+		<ContentTargetFolders Condition="'$(ContentTargetFolders)' == ''">content;contentFiles</ContentTargetFolders>
+		<PackDependsOn>$(BeforePack); _IntermediatePack; GenerateNuspec; $(PackDependsOn)</PackDependsOn>
+		<IsInnerBuild Condition="'$(TargetFramework)' != '' AND '$(TargetFrameworks)' != ''">true</IsInnerBuild>
+		<SymbolPackageFormat Condition="'$(SymbolPackageFormat)' == ''">symbols.nupkg</SymbolPackageFormat>
+		<AddPriFileDependsOn Condition="'$(MicrosoftPortableCurrentVersionPropsHasBeenImported)' == 'true'">DeterminePortableBuildCapabilities</AddPriFileDependsOn>
+		<NuspecOutputPath Condition="'$(NuspecOutputPath)' == ''">$(BaseIntermediateOutputPath)$(Configuration)\</NuspecOutputPath>
+		<WarnOnPackingNonPackableProject Condition="'$(WarnOnPackingNonPackableProject)' == ''">false</WarnOnPackingNonPackableProject>
+		<ImportNuGetBuildTasksPackTargetsFromSdk Condition="'$(ImportNuGetBuildTasksPackTargetsFromSdk)' == ''">false</ImportNuGetBuildTasksPackTargetsFromSdk>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>.dll; .exe; .winmd; .json; .pri; .xml; $(AllowedOutputExtensionsInPackageBuildOutputFolder)</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<AllowedOutputExtensionsInSymbolsPackageBuildOutputFolder Condition="'$(SymbolPackageFormat)' != 'snupkg'">.pdb; .mdb; $(AllowedOutputExtensionsInPackageBuildOutputFolder); $(AllowedOutputExtensionsInSymbolsPackageBuildOutputFolder)</AllowedOutputExtensionsInSymbolsPackageBuildOutputFolder>
+		<AllowedOutputExtensionsInSymbolsPackageBuildOutputFolder Condition="'$(SymbolPackageFormat)' == 'snupkg'">.pdb</AllowedOutputExtensionsInSymbolsPackageBuildOutputFolder>
+		<SuppressDependenciesWhenPacking Condition="'$(SuppressDependenciesWhenPacking)' == ''">false</SuppressDependenciesWhenPacking>-->
+	</PropertyGroup>
+
+	<!--<Target Name="ValidateCommandLine" AfterTargets="BeforeCompile" BeforeTargets="CoreCompile">
+		<Error Text="$(PackageVersion)" />
+	</Target>-->
+	<PropertyGroup>
+		<NuspecFile>$(SolutionDir)\Build\BuildNuget.nuspec</NuspecFile>
+		<NuspecProperties>
+			configuration=$(Configuration);
+			targetFramework=$(TargetFramework);
+			id=$(PackageId);
+			version=$(PackageVersion);
+			description=$(PackageDescription);
+
+			author=$(PackageAuthors);
+			tags=$(PackageTags);
+			Company=$(Company);
+			Product=$(Product);
+		</NuspecProperties>
+		<!--<NuspecBasePath>$(TargetDir)</NuspecBasePath>-->
+		<NuspecBasePath>bin\$(Configuration)\$(TargetFramework)</NuspecBasePath>
+	</PropertyGroup>
+</Project>

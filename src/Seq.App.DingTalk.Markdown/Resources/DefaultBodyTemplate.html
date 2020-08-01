@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$Level}}</title>
+</head>
+<body>
+
+    <h3 id="level">{{$Level}}</h3>
+<p>{{$LocalTimestamp}}</p>
+<hr />
+<p>{{#if_eq $EventType &quot;$A1E77000&quot;}}
+<strong>Alert condition <em>{{Condition}}</em> detected on <a href="%7B%7BDashboardUrl%7D%7D">{{DashboardTitle}}/{{ChartTitle}}</a></strong></p>
+<p><a href="%7B%7BResultsUrl%7D%7D">Explore detected results in Seq</a></p>
+<blockquote>
+<p><strong>Query</strong>
+- [ ] <code>{{Query}}</code>
+Measurement window</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{MeasurementWindow}}</li>
+</ul>
+<blockquote>
+<p>Suppression time</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{SuppressionTime}}</li>
+</ul>
+<blockquote>
+<p>Detected range start</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{AlertRangeStart}}</li>
+</ul>
+<blockquote>
+<p>Detected range end</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{AlertRangeEnd}}</li>
+</ul>
+<blockquote>
+<p>Signal
+{{#if SignalTitles}}</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{pretty SignalTitles}}
+{{else}}</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{pretty SignalExpression}}
+{{/if}}
+{{#if OwnerUsername}}</li>
+</ul>
+<blockquote>
+<p>Owner</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{OwnerUsername}}
+{{/if}}
+{{#if Errors}}</li>
+</ul>
+<blockquote>
+<p><strong>Error</strong>
+{{#each Errors}}</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{this}}
+{{/each}}
+{{/if}}
+{{#if Results}}</li>
+</ul>
+<blockquote>
+<p><strong>Results</strong>
+{{#each Results}}</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> {{pretty this.Key}}
+{{#each Slices}}</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <strong>{{SliceStart}}</strong> {{pretty Rowset}}
+{{/each}}
+{{/each}}
+{{/if}}
+{{else}}
+<strong>{{$Message}}</strong></li>
+</ul>
+<p><a href="%7B%7B$ServerUri%7D%7D#/events?filter=@Id%20%3D%20%27%7B%7B$Id%7D%7D%27&amp;show=expanded">Open this event in Seq</a></p>
+<p>{{#each $Properties}}</p>
+<blockquote>
+<p>** {{@key}} **
+<em>{{pretty this}}</em></p>
+</blockquote>
+<p>{{/each}}
+{{#if $Exception}}
+<strong>Exception</strong></p>
+<pre><code>{{$Exception}}
+</code></pre>
+<p>{{/if}}
+{{/if_eq}}</p>
+<hr />
+<p>Sent by Seq installed at &lt;{{$ServerUri}}&gt;.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>$description$</description>
+		<!-- <language>en-US</language>
+    <projectUrl>https://github.com/datalust/seq-apps</projectUrl>
+    <iconUrl>https://getseq.net/images/apps/seq-app-file-archive.png</iconUrl>-->
+		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+		<tags>$tags$</tags>
+		<dependencies>
+			<group targetFramework="$targetFramework$" >
+				<dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.7" exclude="Build,Analyzers" />
+				<dependency id="Seq.Apps" version="5.1.0" exclude="Build,Analyzers" />
+				<dependency id="Handlebars.Net" version="1.10.1" exclude="Build,Analyzers" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="*" target="lib\$targetFramework$" exclude="Serilog.dll;Seq.Apps.dll;**\*.pdb" />
+	</files>
+</package>
