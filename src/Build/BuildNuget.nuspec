@@ -6,9 +6,9 @@
 		<authors>$author$</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>$description$</description>
-		<!-- <language>en-US</language>
-    <projectUrl>https://github.com/datalust/seq-apps</projectUrl>
-    <iconUrl>https://getseq.net/images/apps/seq-app-file-archive.png</iconUrl>-->
+		<!-- <language>en-US</language>-->
+		<projectUrl>https://github.com/mccj/Seq.App.DingTalk</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/mccj/Seq.App.DingTalk/master/%E5%9B%BE%E6%A0%87/icon.jpg</iconUrl>
 		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
 		<tags>$tags$</tags>
 		<dependencies>
