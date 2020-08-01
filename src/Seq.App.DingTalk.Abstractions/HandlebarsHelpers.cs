@@ -7,13 +7,37 @@ using System.Linq;
 
 namespace Seq.App.DingTalk
 {
-    static class HandlebarsHelpers
+    public static class HandlebarsHelpers
     {
         public static void Register()
         {
             Handlebars.RegisterHelper("pretty", PrettyPrintHelper);
             Handlebars.RegisterHelper("if_eq", IfEqHelper);
             Handlebars.RegisterHelper("substring", SubstringHelper);
+            Handlebars.RegisterHelper("formatDate", FormatDateHelper);
+        }
+
+        static void FormatDateHelper(TextWriter output, dynamic context, object[] arguments)
+        {
+            var value = arguments.FirstOrDefault();
+            if (value == null)
+            {
+                output.WriteSafeString("null");
+                return;
+            }
+            var data = value as System.DateTime?;
+            if (data == null || !data.HasValue)
+            {
+                output.WriteSafeString(value);
+                return;
+            }
+            var format = arguments.Skip(1).FirstOrDefault()?.ToString();
+            if (format != null)
+            {
+                var cultureName = arguments.Skip(2).FirstOrDefault()?.ToString();
+                var culture = string.IsNullOrWhiteSpace(cultureName) ? System.Globalization.CultureInfo.CurrentCulture : new System.Globalization.CultureInfo(cultureName);
+                output.WriteSafeString(data.Value.ToString(format, culture));
+            }
         }
 
         static void PrettyPrintHelper(TextWriter output, object context, object[] arguments)
