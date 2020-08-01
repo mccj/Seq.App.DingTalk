@@ -1,14 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <TargetFramework>net452</TargetFramework>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.0-beta-1</Version>
-	  <Authors>mccj</Authors>
-	  <Description>An improved Markdown DingTalk app for Seq (https://getseq.net) that uses Handlebars.NET for templating. This package supports Seq 3.3+. Install the 1.x version of this package for compatibility with earlier versions of Seq.</Description>
-	  <PackageTags>seq-app seq serilog events dingtalk markdown</PackageTags>
+	  <Description>An improved Link DingTalk app for Seq (https://getseq.net) that uses Handlebars.NET for templating. This package supports Seq 3.3+. Install the 1.x version of this package for compatibility with earlier versions of Seq.</Description>
+	  <PackageTags>seq-app seq serilog events dingtalk Link</PackageTags>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Seq.App.DingTalk.Abstractions\Seq.App.DingTalk.Abstractions.csproj" />
   </ItemGroup>

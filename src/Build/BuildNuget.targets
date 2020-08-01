@@ -1,5 +1,8 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
+		<Version>1.0.0-beta-1</Version>
+		<Authors>mccj</Authors>
+
 		<PackageId Condition=" '$(PackageId)' == '' ">$(AssemblyName)</PackageId>
 		<PackageVersion Condition=" '$(PackageVersion)' == '' ">$(Version)</PackageVersion>
 		<PackageVersion Condition=" '$(PackageVersion)' == '' ">1.0.0</PackageVersion>
