@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkChatbot", "DingtalkChatbot\DingtalkChatbot.csproj", "{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkWebHook", "DingtalkChatbot\DingtalkWebHook.csproj", "{799CAA3C-D205-46E3-9EC7-30CC4C40E1F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Text", "Seq.App.DingTalk.Text\Seq.App.DingTalk.Text.csproj", "{EFF08959-E6DE-449A-B88D-C3202CDB3B77}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Abstractions", "Seq.App.DingTalk.Abstractions\Seq.App.DingTalk.Abstractions.csproj", "{B9347E15-55CB-4E9B-BD3D-05BAF7CDA850}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkChatbot.Tests", "DingtalkChatbot.Tests\DingtalkChatbot.Tests.csproj", "{149B993E-6C25-4BA6-9D24-1281FC1FD85C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DingtalkWebHook.Tests", "DingtalkChatbot.Tests\DingtalkWebHook.Tests.csproj", "{149B993E-6C25-4BA6-9D24-1281FC1FD85C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Image", "Seq.App.DingTalk.Image\Seq.App.DingTalk.Image.csproj", "{0F878892-DC8F-4722-902A-5FF7A19A085F}"
 EndProject
@@ -27,7 +27,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.Api.Tests", "Seq.Api.Tests\Seq.Api.Tests.csproj", "{51CD8460-78DF-484E-AA0D-38ADF93EDB85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seq.App.DingTalk.Abstractions.Tests", "Seq.App.DingTalk.Abstractions.Tests\Seq.App.DingTalk.Abstractions.Tests.csproj", "{0C79ED61-CEFE-467F-A7F6-4FA5EF0CC868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.DingTalk.Abstractions.Tests", "Seq.App.DingTalk.Abstractions.Tests\Seq.App.DingTalk.Abstractions.Tests.csproj", "{0C79ED61-CEFE-467F-A7F6-4FA5EF0CC868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkWeixinWebHook", "WorkWeixin.WebHook\WorkWeixinWebHook.csproj", "{F9E59E38-C4C6-4B09-88CF-4D87517DA1D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkWeixinWebHook.Test", "WorkWeixinWebHook.Test\WorkWeixinWebHook.Test.csproj", "{3C18DA51-28D5-4671-A1B4-CBAC02FA1310}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.WorkWeixin.Markdown", "Seq.App.WorkWeixin.Markdown\Seq.App.WorkWeixin.Markdown.csproj", "{6910ECE5-4177-475B-BA9D-C4E109001734}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seq.App.WorkWeixin.Text", "Seq.App.WorkWeixin.Text\Seq.App.WorkWeixin.Text.csproj", "{F8B474B1-AD36-45F7-BCD0-DF309F179DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +83,22 @@ Global
 		{0C79ED61-CEFE-467F-A7F6-4FA5EF0CC868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C79ED61-CEFE-467F-A7F6-4FA5EF0CC868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C79ED61-CEFE-467F-A7F6-4FA5EF0CC868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E59E38-C4C6-4B09-88CF-4D87517DA1D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E59E38-C4C6-4B09-88CF-4D87517DA1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E59E38-C4C6-4B09-88CF-4D87517DA1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E59E38-C4C6-4B09-88CF-4D87517DA1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C18DA51-28D5-4671-A1B4-CBAC02FA1310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C18DA51-28D5-4671-A1B4-CBAC02FA1310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C18DA51-28D5-4671-A1B4-CBAC02FA1310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C18DA51-28D5-4671-A1B4-CBAC02FA1310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6910ECE5-4177-475B-BA9D-C4E109001734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6910ECE5-4177-475B-BA9D-C4E109001734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6910ECE5-4177-475B-BA9D-C4E109001734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6910ECE5-4177-475B-BA9D-C4E109001734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B474B1-AD36-45F7-BCD0-DF309F179DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B474B1-AD36-45F7-BCD0-DF309F179DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B474B1-AD36-45F7-BCD0-DF309F179DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B474B1-AD36-45F7-BCD0-DF309F179DD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

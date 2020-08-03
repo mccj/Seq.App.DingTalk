@@ -10,8 +10,8 @@ namespace Seq.App.DingTalk.Tests
         public async void Test1()
         {
             //var webhookUrl = "https://oapi.dingtalk.com/robot/send?access_token=18af14d937f5e97885ecbb96239edd825d421b8d62429dab0477584c86b34ab1";
-            var webhookUrl = "https://oapi.dingtalk.com/robot/send?access_token=4ae804ea926fde280482f119069e4e47cdeedb7788fa08ab1e8daa4ea8e26ec1";
-            var secret = "SECaed0a0b2bec78747bbac5d679c31ff98f226c3d1eba30c4d5a86dab7b3e2174e";
+            var webhookUrl = "https://oapi.dingtalk.com/robot/send?access_token=2ca5bc8fda42bb8f3bd809ea59e5c4526c38aab5559f4020925b20c2f17dd636";
+            var secret = "SECe2e84a572a9882b2786319b17bdc55989314ac4533eeee8f7e3338d0a29ed06a";
             var client = new DingtalkChatbot.WebhookClient(webhookUrl,secret);
             // Text消息@所有人
             //var r1 = await client.SendText("我就是小丁，小丁就是我！", isAtAll: true);

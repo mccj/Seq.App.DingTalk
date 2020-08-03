@@ -10,8 +10,9 @@ namespace Seq.App.DingTalk.Abstractions.Tests
         {
             HandlebarsHelpers.Register();
 
-            var template = "aaa {{formatDate dataTime \"yyyy-MM-dd hh\" \"en-us\"}} bbb";
-            var ddd = HandlebarsDotNet.Handlebars.Compile(template)?.Invoke(new { dataTime = System.DateTime.Now });
+            TimeSpan.TryParse("08:00", out var offset);
+            var template = "aaa {{formatDate dataTime \"yyyy-MM-dd hh:mm:ss\" \"08:00\"}} bbb";
+            var ddd = HandlebarsDotNet.Handlebars.Compile(template)?.Invoke(new { dataTime = System.DateTimeOffset.Parse("2020-08-02T03:47:13.4109963+00:00") });
         }
     }
 }

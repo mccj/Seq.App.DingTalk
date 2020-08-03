@@ -10,7 +10,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\DingtalkChatbot\DingtalkChatbot.csproj" />
+		<ProjectReference Include="..\DingtalkChatbot\DingtalkWebHook.csproj" />
+		<ProjectReference Include="..\WorkWeixin.WebHook\WorkWeixinWebHook.csproj" />
 	</ItemGroup>
 
 </Project>

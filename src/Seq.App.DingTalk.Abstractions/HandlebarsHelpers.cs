@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Seq.App.DingTalk
+namespace Seq.App
 {
     public static class HandlebarsHelpers
     {
@@ -25,7 +25,7 @@ namespace Seq.App.DingTalk
                 output.WriteSafeString("null");
                 return;
             }
-            var data = value as System.DateTime?;
+            var data = value as System.DateTime? ?? value as System.DateTimeOffset?;
             if (data == null || !data.HasValue)
             {
                 output.WriteSafeString(value);
@@ -34,9 +34,9 @@ namespace Seq.App.DingTalk
             var format = arguments.Skip(1).FirstOrDefault()?.ToString();
             if (format != null)
             {
-                var cultureName = arguments.Skip(2).FirstOrDefault()?.ToString();
-                var culture = string.IsNullOrWhiteSpace(cultureName) ? System.Globalization.CultureInfo.CurrentCulture : new System.Globalization.CultureInfo(cultureName);
-                output.WriteSafeString(data.Value.ToString(format, culture));
+                var offsetString = arguments.Skip(2).FirstOrDefault()?.ToString();
+                TimeSpan.TryParse(offsetString, out var offset);
+                output.WriteSafeString(data.Value.ToOffset(offset).ToString(format));
             }
         }
 

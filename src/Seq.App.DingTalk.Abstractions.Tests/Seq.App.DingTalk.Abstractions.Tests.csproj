@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\DingtalkChatbot\DingtalkChatbot.csproj" />
+		<ProjectReference Include="..\DingtalkChatbot\DingtalkWebHook.csproj" />
 		<ProjectReference Include="..\Seq.App.DingTalk.Abstractions\Seq.App.DingTalk.Abstractions.csproj" />
 	</ItemGroup>
 

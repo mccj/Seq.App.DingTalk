@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace DingtalkChatbot
 {
+    /// <summary>
+    /// 钉钉群机器人
+    /// https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq
+    /// </summary>
     public class WebhookClient : IDisposable
     {
         private readonly System.Net.Http.HttpClient _httpClient;
