@@ -12,7 +12,7 @@ namespace Seq.App.DingTalk.Tests
             //var webhookUrl = "https://oapi.dingtalk.com/robot/send?access_token=18af14d937f5e97885ecbb96239edd825d421b8d62429dab0477584c86b34ab1";
             var webhookUrl = "https://oapi.dingtalk.com/robot/send?access_token=2ca5bc8fda42bb8f3bd809ea59e5c4526c38aab5559f4020925b20c2f17dd636";
             var secret = "SECe2e84a572a9882b2786319b17bdc55989314ac4533eeee8f7e3338d0a29ed06a";
-            var client = new DingtalkChatbot.WebhookClient(webhookUrl,secret);
+            var client = new DingtalkChatbot.WebhookClient(webhookUrl, secret);
             // Text消息@所有人
             //var r1 = await client.SendText("我就是小丁，小丁就是我！", isAtAll: true);
             // image表情消息
@@ -59,6 +59,19 @@ namespace Seq.App.DingTalk.Tests
                    new DingtalkChatbot.ActionCardBtn("反对", "https://www.dingtalk.com/")
                },
                true, true);
+        }
+
+        [Fact]
+        public async void Test2()
+        {
+            var http = new System.Net.Http.HttpClient();
+            var r = await http.SendAsync(new System.Net.Http.HttpRequestMessage()
+            {
+                RequestUri = new Uri("http://10.11.201.12:5000/api/weatherforecast/AlertMessage/42a3ddaf-160c-47a3-ab72-154d11305298"),
+                Method = System.Net.Http.HttpMethod.Post,
+                Content = new System.Net.Http.StringContent("{1}", System.Text.Encoding.UTF8, "application/json")
+            });
+            var d = await r.Content.ReadAsStringAsync();
         }
     }
 }

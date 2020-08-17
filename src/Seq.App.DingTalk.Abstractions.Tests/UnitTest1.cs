@@ -11,7 +11,7 @@ namespace Seq.App.DingTalk.Abstractions.Tests
             HandlebarsHelpers.Register();
 
             TimeSpan.TryParse("08:00", out var offset);
-            var template = "aaa {{formatDate dataTime \"yyyy-MM-dd hh:mm:ss\" \"08:00\"}} bbb";
+            var template = "aaa {{formatDate dataTime \"yyyy-MM-dd hh:mm:ss\" \"08:00\"}} bbb{{dataTime}}";
             var ddd = HandlebarsDotNet.Handlebars.Compile(template)?.Invoke(new { dataTime = System.DateTimeOffset.Parse("2020-08-02T03:47:13.4109963+00:00") });
         }
     }
